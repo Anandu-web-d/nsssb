@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #e0f7fa, #f4f4f9);
+    min-height: 100vh;
+    padding: 20px;
+    text-decoration: none;
+}
+
+#feburay{
+    list-style: none;
+}
+.head {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.activity-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.month-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+    list-style: none;
+}
+
+.month-box h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.activity-list {
+    list-style-type: none;
+}
+
+.activity-list li {
+    padding: 8px 0;
+    color: #666;
+}
+
+.month-box:hover {
+    transform: scale(1.05);
+    background-color: #b2ebf2;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #1da1f2;
+}
+
+.footer-text {
+    font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .month-box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .month-box {
+        width: 100%;
+    }
+}
+
+/* Styling for the NSS Logo and NSS SB Text */
+.nss-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+.nss-name{
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    margin-top: 0%;
+}
+
+.nss-logo {
+    width: 40px; /* Adjust as needed */
+    height: auto;
+}
+
+.nss-text {
+    font-size: 1.8em;
+    color: #333;
+    font-weight: bold;
+    padding: 2px;
+}
+
+nav {
+    display: flex;
+    padding: 0 2%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+
+nav img {
+    width: 200px; 
+    height: auto;
+}
+
+.nav-links {
+    flex: 1;
+    text-align:right;
+    
+}
+
+.nav-links ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    color:  black;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+ content: '';
+ width: 0%;
+ height: 2px;
+ background: #f44336;
+ display: block;
+margin: auto;
+transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #1da1f2;
+}
+
+.footer-text {
+    font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.month-link {
+    text-decoration: none;
+    color: inherit; /* Matches the parent color */
+    font-weight: bold;
+}
+
+.month-link:hover {
+    color: #1da1f2; /* Change this hover color to desired link effect */
+    text-decoration: underline;
+}

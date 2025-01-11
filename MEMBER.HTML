@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS Member List</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        /* Flexbox card layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            gap: 15px;
+            max-width: 1200px;
+        }
+
+        .column {
+            flex: 1 0 calc(25% - 15px); /* Adjust for 4 items per row */
+            max-width: calc(25% - 15px);
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 1024px) {
+            .column {
+                flex: 1 0 calc(33.33% - 15px); /* 3 items per row */
+                max-width: calc(33.33% - 15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .column {
+                flex: 1 0 calc(50% - 15px); /* 2 items per row */
+                max-width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .column {
+                flex: 1 0 100%; /* 1 item per row */
+                max-width: 100%;
+            }
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        .title {
+            color: #555;
+            font-weight: bold;
+        }
+
+        nav {
+    display: flex;
+    padding: 0 2%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+
+nav img {
+    width: 200px; 
+    height: auto;
+}
+
+.nav-links {
+    flex: 1;
+    text-align:right;
+    
+}
+
+.nav-links ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    color:  black;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+ content: '';
+ width: 0%;
+ height: 2px;
+ background: #f44336;
+ display: block;
+margin: auto;
+transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NSS Members</h1>
+    </header>
+    
+    <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activity.html">Activities</a></li>
+            <li><a href="">Achievements</a></li>
+            <li><a href="MEMBER.HTML">About us</a></li>
+        </ul>
+    </div>
+
+    <!-- POS Section -->
+    <h2>POS</h2>
+    <div class="row">
+        <!-- Add 4 POS members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="POS 1"><div class="container"><h2>POS Member 1</h2><p class="title">Leader</p><p>pos1@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="POS 2"><div class="container"><h2>POS Member 2</h2><p class="title">Co-Leader</p><p>pos2@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="POS 3"><div class="container"><h2>POS Member 3</h2><p class="title">Manager</p><p>pos3@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="POS 4"><div class="container"><h2>POS Member 4</h2><p class="title">Assistant</p><p>pos4@example.com</p></div></div></div>
+    </div>
+
+    <!-- Secretaries Section -->
+    <h2>Secretaries</h2>
+    <div class="row">
+        <!-- Add 6 Secretary members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Secretary 1"><div class="container"><h2>Secretary 1</h2><p class="title">Coordinator</p><p>sec1@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Secretary 2"><div class="container"><h2>Secretary 2</h2><p class="title">Assistant</p><p>sec2@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Secretary 3"><div class="container"><h2>Secretary 3</h2><p class="title">Treasurer</p><p>sec3@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Secretary 4"><div class="container"><h2>Secretary 4</h2><p class="title">Supervisor</p><p>sec4@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Secretary 5"><div class="container"><h2>Secretary 5</h2><p class="title">Analyst</p><p>sec5@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Secretary 6"><div class="container"><h2>Secretary 6</h2><p class="title">Planner</p><p>sec6@example.com</p></div></div></div>
+    </div>
+
+    <!-- Designer and Developer Section -->
+    <h2>Designer and Developer</h2>
+    <div class="row">
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Designer"><div class="container"><h2>Designer</h2><p class="title">UI/UX</p><p>designer@example.com</p></div></div></div>
+    </div>
+
+    <!-- Executives Section -->
+    <h2>Executives</h2>
+    <div class="row">
+        <!-- Add 20 Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+      
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+      
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+      
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 1"><div class="container"><h2>Executive 1</h2><p class="title">Role</p><p>exe1@example.com</p></div></div></div>
+        <!-- Repeat for 19 more Executive members -->
+        <div class="column"><div class="card"><img src="images/AKILESH.jpg" alt="Executive 20"><div class="container"><h2>Executive 20</h2><p class="title">Role</p><p>exe20@example.com</p></div></div></div>
+      </div>
+</body>
+</html>

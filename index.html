@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS SB College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<section class="header">
+ 
+    <nav>
+        <a href="index.html"><img src="images/nss logo 1.png" alt="NSS SB"></a>
+        <div class="bug" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activity.html">Activities</a></li>
+                <li><a href="#">Achievements</a></li>
+                <li><a href="MEMBER.HTML">About Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+        <h1><img src="images/new-nss-logo-F8180B4F6C-seeklogo.com.png" alt="NSS Logo"> Not Me, But You</h1>
+        <p>Welcome to the National Service Scheme of SB College</p>
+        <a href="#contact" class="hero-btn">Contact Us</a>
+    </div>
+</section>
+
+<section class="image-scroll-section">
+    <div class="scrolling-images">
+        <img src="images/diwali.jpg" alt="Diwali Celebration">
+        <img src="images/AKILESH.jpg" alt="Activity Image">
+        <img src="images/AKILESH.jpg" alt="Event Image">
+        <img src="images/diwali.jpg" alt="Repeated Diwali Image">
+        <img src="images/AKILESH.jpg" alt="Repeated Event Image">
+    </div>
+</section>
+
+<section class="about-us">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+                Welcome to NSS SB College! We are a vibrant community dedicated to serving society and fostering leadership 
+                through various activities and initiatives. Our team believes in the motto "Not me but you," encouraging 
+                selfless service and the holistic development of students.
+            </p>
+        </div>
+        <img src="images/WhatsApp Image 2024-10-14 at 21.41.46_c268a469.jpg" alt="About Us" style="float: right; margin-left: 20px; border-radius: 10px; max-width: 50%;">
+    </div>
+</section>
+
+<footer>
+    <div class="social-buttons">
+        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 NSS SB College | All rights reserved</p>
+</footer>
+
+<script>
+  
+    const navLinks = document.querySelector(".bug");
+    const toggleMenu = () => navLinks.classList.toggle("show");
+
+    document.querySelector(".fa-bars").onclick = toggleMenu;
+    document.querySelector(".fa-times").onclick = toggleMenu;
+
+
+   
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+    // Auto-scroll for image section
+    const scrollingImages = document.querySelector('.scrolling-images');
+    const images = document.querySelectorAll('.scrolling-images img');
+    let imageIndex = 0;
+
+    function autoScrollImages() {
+        imageIndex++;
+        if (imageIndex >= images.length / 2) {
+            scrollingImages.style.transition = 'none';
+            imageIndex = 0;
+            scrollingImages.style.transform = `translateX(0)`;
+            setTimeout(() => {
+                scrollingImages.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+        } else {
+            scrollingImages.style.transform = `translateX(-${imageIndex * 100}px)`;
+        }
+    }
+
+    setInterval(autoScrollImages, 3000);
+</script>
+</body>
+</html>
+
